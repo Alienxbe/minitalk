@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 00:26:06 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/20 13:47:40 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/20 15:13:59 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "libft.h"
 # include <signal.h>
 
-# define SLEEP_BETWEEN_MSG	400
+# define SLEEP_BETWEEN_MSG	200
 
 typedef struct sigaction	t_sig;
 

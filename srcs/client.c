@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 00:26:06 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/20 13:59:45 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/20 15:14:08 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ static void	send_string(char *str, pid_t pid)
 	if (!str)
 		return ;
 	while (*str)
-	{
 		send_data(*str++, sizeof(char), pid);
-		// usleep(SLEEP_BETWEEN_MSG);
-	}
 }
 
 static void	handle_sig(int sig)
@@ -30,12 +27,12 @@ static void	handle_sig(int sig)
 	len = read_data(sig == SIGUSR2, sizeof(int));
 	if (len)
 	{
-		printf("Server has read %d characters\n", len);
+		ft_printf("Server has read %d characters\n", len);
 		exit(0);
 	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	pid_t	server_pid;
 
