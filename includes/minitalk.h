@@ -16,7 +16,7 @@
 # include "libft.h"
 # include <signal.h>
 
-# define SLEEP_BETWEEN_MSG	200
+# define SLEEP_BETWEEN_MSG	300
 
 typedef struct sigaction	t_sig;
 
