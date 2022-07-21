@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 00:26:06 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/20 15:14:08 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/21 14:30:10 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ static void	send_string(char *str, pid_t pid)
 
 static void	handle_sig(int sig)
 {
-	int	len;
+	t_data	len;
 
 	len = read_data(sig == SIGUSR2, sizeof(int));
-	if (len)
+	if (len.isread)
 	{
-		ft_printf("Server has read %d characters\n", len);
+		ft_printf(FT_BLUE "Server has read %d characters\n" FT_RESETCOL, len);
 		exit(0);
 	}
 }

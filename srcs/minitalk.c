@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 01:19:23 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/18 22:58:45 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/21 13:52:31 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,17 +61,18 @@ void	send_data(size_t d, size_t size, pid_t pid)
 ** bit:		bit read from the signal
 ** size:	lenght of the data to be read (in bytes)
 */
-size_t	read_data(unsigned char bit, size_t size)
+t_data	read_data(unsigned char bit, size_t size)
 {
 	static size_t	bit_count;
 	static size_t	n;
-	size_t			ret;
+	t_data			ret;
 
-	ret = 0;
+	ret.isread = 0;
 	n = (n << 1) + bit;
+	ret.n = n;
 	if (++bit_count == size * 8)
 	{
-		ret = n;
+		ret.isread = 1;
 		n = 0;
 		bit_count = 0;
 	}
