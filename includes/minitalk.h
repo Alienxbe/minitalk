@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 00:26:06 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/21 16:26:06 by mykman           ###   ########.fr       */
+/*   Updated: 2022/08/07 17:51:00 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,14 @@
 # define MINITALK_H
 
 # include <signal.h>
-# include "libft.h"
+# include <stdlib.h>
+# include <unistd.h>
+
+# include "ft_colors.h"
+# include "ft_ctype.h"
+# include "ft_memory.h"
+# include "ft_printf.h"
+# include "ft_string.h"
 
 # define SLEEP_BETWEEN_MSG	300
 

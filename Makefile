@@ -6,7 +6,7 @@
 #    By: mykman <mykman@student.s19.be>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/08 00:02:10 by mykman            #+#    #+#              #
-#    Updated: 2022/07/18 23:58:21 by mykman           ###   ########.fr        #
+#    Updated: 2022/08/07 17:53:53 by mykman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ LIBFT_NAME		=	libft.a
 MAKE_LIBFT		=	@make -s -C ${LIBFT_FOLDER}
 
 # Files
-INCLUDES		=	-I./includes -I./${LIBFT_FOLDER}/includes
+INCLUDES		=	-I./includes \
+					-I./${LIBFT_FOLDER}/includes/ft_printf \
+					-I./${LIBFT_FOLDER}/includes/general_functions
 SRCS			=	minitalk.c
 SRCS_CLIENT		=	client.c
 SRCS_SERVER		=	server.c

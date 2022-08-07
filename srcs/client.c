@@ -6,7 +6,7 @@
 /*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 00:26:06 by mykman            #+#    #+#             */
-/*   Updated: 2022/07/21 16:55:00 by mykman           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:53:38 by mykman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 		ft_exit("Usage: ./client [pid] [message]", 1);
+	if (!ft_isnumber(argv[1]))
+		ft_exit("Usage: ./client [pid] [message]\npid must be a number!", 1);
 	server_pid = ft_atoi(argv[1]);
 	ft_sig(SIGUSR1, SA_SIGINFO, &handle_sig);
 	ft_sig(SIGUSR2, SA_SIGINFO, &handle_sig);
