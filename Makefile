@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mykman <mykman@student.s19.be>             +#+  +:+       +#+         #
+#    By: marykman <marykman@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/08 00:02:10 by mykman            #+#    #+#              #
-#    Updated: 2022/08/07 17:53:53 by mykman           ###   ########.fr        #
+#    Updated: 2023/11/14 10:19:33 by marykman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ PREFIX			=	[${YELLOW}${NAME}${RESET}]\t
 NAME			=	minitalk
 CLIENT			=	client
 SERVER			=	server
-LIBFT_FOLDER	=	Libft/
+LIBFT_FOLDER	=	libft/
 LIBFT_NAME		=	libft.a
 MAKE_LIBFT		=	@make -s -C ${LIBFT_FOLDER}
 
