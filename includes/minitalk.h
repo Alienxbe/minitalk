@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mykman <mykman@student.s19.be>             +#+  +:+       +#+        */
+/*   By: marykman <marykman@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/10 00:26:06 by mykman            #+#    #+#             */
-/*   Updated: 2022/08/07 17:51:00 by mykman           ###   ########.fr       */
+/*   Updated: 2023/11/14 13:49:34 by marykman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@
 # include "ft_memory.h"
 # include "ft_printf.h"
 # include "ft_string.h"
+# include "ft_stdio.h"
 
-# define SLEEP_BETWEEN_MSG	300
+# define SLEEP_BETWEEN_MSG	100
 
 typedef struct sigaction	t_sig;
 
